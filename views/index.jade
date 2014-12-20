@@ -1,0 +1,12 @@
+extend ./layout
+block content
+  p Bienvenue #{user.username}, tu as le choix !
+  if (msg)
+    span(style="color:green;") #{msg}
+  ul
+    li
+      a(href="/logout" title="Déconnexion") déconnexion
+      | &nbsp;pour tester le login (avec des valeurs fausses, manquantes, sans le js d&#39;activé, etc.)
+    li 
+      a(href="/account" title="Changer ton pass") changer ton pass
+  

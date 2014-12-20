@@ -1,0 +1,17 @@
+extends ./layout
+block content
+  form(action="/login", method="post")
+    fieldset
+      legend connexion
+      label(for="username") pseudo
+      input(type="text", name="username", id="username", placeholder="pseudo", required)
+      br
+      label(for="password") mdp
+      input(type="password", name="password", id="password", placeholder="mdp", required)
+      br
+      input(type="submit" value="hop !")
+  if (error)
+    span(style="color:red;") #{error}
+
+  p Pas encore de compte ? 
+    a(href="/register" title="Créer un compte") Par ici !

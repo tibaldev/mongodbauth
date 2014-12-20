@@ -1,0 +1,14 @@
+extend ./layout
+block content
+  p change ton mot de passe #{user.username} !
+  form(action="/account", method="post")
+    fieldset
+      legend changement de mdp
+      label(for="password") ancien mdp
+      input(type="password", id="password", name="password")
+      label(for="newpassword") nouveau mdp
+      input(type="password", name="newpassword", id="newpassword")
+      input(type="hidden" name="username" value="#{user.username}")
+      input(type="submit" value="hop !")
+  if (error)
+    span(style="color:red;") #{error}

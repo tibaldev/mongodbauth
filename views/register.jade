@@ -1,0 +1,12 @@
+extends ./layout
+block content
+  form(action="/register", method="post")
+    fieldset
+      legend création d'un nouveau compte
+      label(for="username") choisis un pseudo
+      input(type="text", name="username", id="username", placeholder="pseudo", required)
+      label(for="password") et un pass 
+      input(type="password", name="password", id="password" placeholder="pass", required)
+      input(type="submit" value="hop !")
+  if (error)
+    span(style="color:red;") #{error}

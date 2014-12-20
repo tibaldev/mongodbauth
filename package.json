@@ -1,0 +1,21 @@
+{
+  "name": "Mongodbauth",
+  "description": "Authentification simple avec Express et Mongodb",
+  "main": "server.js",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "4.x",
+    "body-parser": "1.x.x",
+    "express-session": "1.x.x",
+    "cookie-parser": "1.x.x",
+    "errorhandler": "1.x.x",
+    "jade": "1.x",
+    "mongodb": "1.x",
+    "mongoose": "3.x.x",
+    "passport": "0.x",
+    "passport-local": "1.x.x",
+    "passport-local-mongoose": "1.x",
+    "connect-flash": "0.1.x"
+  }
+}
