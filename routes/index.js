@@ -1,7 +1,7 @@
 var passport = require('passport');
 var Account = require('../models/db_Account');
 
-module.exports = function(app, router, appData) {
+module.exports = function(app, appData) {
     
     app.route('/')
         // GET - accueil

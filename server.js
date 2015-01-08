@@ -9,8 +9,7 @@ var path           = require('path'),
     passport       = require('passport'),
     flash          = require('connect-flash'),
     app            = express(),
-    appData        = require('./config/config.js'),
-    router         = express.Router();
+    appData        = require('./config/config.js');
 
 
 /** --- CONFIGURATION --- **/
@@ -36,7 +35,7 @@ mongoose.connect(appData.mongoconnect);
 
 
 /** --- ROUTES --- **/
-require('./routes/index.js')(app, router, appData);
+require('./routes/index.js')(app, appData);
 
 /** --- SERVEUR --- **/
 if (app.get('env') == 'dev') {
